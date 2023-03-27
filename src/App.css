@@ -1,4 +1,4 @@
-.root {
+:root {
   --color-212529: #212529;
   --color-ffd333: #ffd333;
   --color-47ad24: #47ad24;
@@ -28,4 +28,17 @@
 .title {
   font:28px;
   font-family: "Roboto" !important;
+  color: var(--color-212529);
+}
+
+.sub-title {
+  font:24px;
+  font-family: "Roboto" !important;
+  color: var(--color-212529);
+}
+
+.desc{
+  font:14px;
+  font-family: "Roboto" !important;
+  color: var(--color-828f99);
 }
