@@ -68,6 +68,7 @@ code {
 
 main {
   overflow-y: scroll;
+  background-color: transparent !important;
 }
 
 .ant-menu-title-content {
@@ -80,4 +81,8 @@ main {
 .ant-layout-header p {
   line-height: 20px;
   font-size: 14px;
+}
+.ant-layout-header div .badge {
+  top: 16px;
+  right: -6px;
 }

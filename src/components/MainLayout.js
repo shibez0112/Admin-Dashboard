@@ -6,6 +6,7 @@ import {
 } from "react-icons/ai";
 import { Outlet } from "react-router-dom";
 import { FaClipboardList, FaBloggerB } from "react-icons/fa";
+import { IoIosNotifications } from "react-icons/io";
 import { SiBrandfolder } from "react-icons/si";
 import { BiCategoryAlt } from "react-icons/bi";
 import { Layout, Menu, theme } from "antd";
@@ -152,8 +153,11 @@ const MainLayout = () => {
               onClick: () => setCollapsed(!collapsed),
             }
           )}
-          <div className="d-flex gap-3 align-items-center">
-            <div></div>
+          <div className="d-flex gap-4 align-items-center">
+            <div className="position-relative">
+              <IoIosNotifications className="fs-4"/>
+              <span className="badge bg-warning rounded-circle p-1 position-absolute">3</span>
+            </div>
             <div className="d-flex gap-3 align-items-center">
               <div>
                 <img
