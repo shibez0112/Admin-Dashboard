@@ -3,7 +3,7 @@ import CustomInput from "./CustomInput";
 import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useDispatch, TypedUseSelectorHook, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { login } from "../features/auth/authSlice";
 
 
@@ -31,13 +31,13 @@ const Login = () => {
     (state) => state.auth
   );
   useEffect(() => {
-    if(!user == null || isSuccess){
+    if(!user === null || isSuccess){
         navigate("admin");
     }
     else {
       alert("Not Authorized");
     }
-  }, [user, isLoading, isError, isSuccess, message]);
+  }, [user, isLoading, isError, isSuccess, message, navigate]);
   return (
     <div className="py-5" style={{ background: "#ffd333", minHeight: "100vh" }}>
       <br />
@@ -48,6 +48,9 @@ const Login = () => {
       <div className="my-5 w-25 bg-white rounded-3 mx-auto p-4">
         <h3 className="text-center title">Login</h3>
         <p className="text-center">Login to your account to continue</p>
+        <div className="error text-center">
+          {message.message == "Rejected" ? "You are not an Admin" : ""}
+        </div>
         <form action="" onSubmit={formik.handleSubmit}>
           <CustomInput
             type="text"
