@@ -1,7 +1,10 @@
 import axios from "axios";
 import { base_url } from "../../utils/base_url";
 
+<<<<<<< HEAD
 // make reference for commit
+=======
+>>>>>>> e06d9a211ba18ea927a585ea7a69ff50e738abfe
 axios.defaults.withCredentials = true;
 
 const login = async (userData) =>{
