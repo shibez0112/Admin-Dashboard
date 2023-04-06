@@ -6,8 +6,16 @@ const getProducts = async () => {
   return response.data;
 };
 
+const addProduct = async(productData) =>{
+  const response = await axios.post(`${base_url}product/`, productData);
+  if (response.data){
+    alert("Sucessfully add product");
+  }
+  return response.data;
+}
+
 const productService = {
-    getProducts,
+    getProducts, addProduct,
 };
 
 export default productService;
